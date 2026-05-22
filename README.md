@@ -1,2 +1,2 @@
 # advent-of-code
-My Advent of Code solutions.
+Benji's Advent of Code solutions.

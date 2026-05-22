@@ -1,0 +1,24 @@
+[project]
+name = "advent-of-code"
+version = "0.1.0"
+authors = [{name = "Benjamin Caddell"}]
+description = "Benji's Advent of Code solutions."
+readme = "README.md"
+license = "MIT"
+license-file = ["LICEN[CS]E"]
+keywords = ["aoc", "advent-of-code", "Advent of Code"]
+requires-python = ">=3.14"
+dependencies = [
+    "pytest>=9.0.3",
+]
+
+[project.urls]
+Repository = "https://github.com/MeBenji/advent-of-code.git"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+norecursedirs = ["Template"]
+
+[tool.ruff]
+lint.extend-select = ["A", "SLF", "SIM", "PTH", "N"]
+format.docstring-code-format = true
