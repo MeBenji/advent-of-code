@@ -1,8 +1,8 @@
 import pytest
 from year2015.day04 import part1, part2
 
-part1_examples: list[tuple[str, int | str]] = [("abcdef", 609043), ("pqrstuv", 1048970)]
-part2_examples: list[tuple[str, int | str]] = []
+part1_examples: list[tuple[str, int]] = [("abcdef", 609043), ("pqrstuv", 1048970)]
+part2_examples: list[tuple[str, int]] = []
 
 
 @pytest.mark.parametrize(("data", "expected"), part1_examples)

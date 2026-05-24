@@ -9,11 +9,8 @@ def wrapping_paper(present: str) -> int:
     return surface_area + slack
 
 
-def part1(data: str) -> int:
-    total_wrapping_paper = 0
-    for present in data.split("\n"):
-        total_wrapping_paper += wrapping_paper(present)
-    return total_wrapping_paper
+def part1(presents: str) -> int:
+    return sum(wrapping_paper(present) for present in presents.splitlines())
 
 
 def ribbon(present: str) -> int:
@@ -24,17 +21,14 @@ def ribbon(present: str) -> int:
     return wrap + bow
 
 
-def part2(data: str) -> int:
-    total_ribbon = 0
-    for present in data.split("\n"):
-        total_ribbon += ribbon(present)
-    return total_ribbon
+def part2(presents: str) -> int:
+    return sum(ribbon(present) for present in presents.splitlines())
 
 
 if __name__ == "__main__":
     file = Path(__file__)
     data = file.with_name(f"{file.stem}_input.txt").read_text()
     solution1 = part1(data)
-    solution2 = part2(data)
     print(f"Solution 1: {solution1}")
+    solution2 = part2(data)
     print(f"Solution 2: {solution2}")
