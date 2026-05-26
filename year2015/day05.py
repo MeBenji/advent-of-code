@@ -52,7 +52,7 @@ def part2(strings: str) -> int:
             )
         )
 
-    return sum(is_nice(s) for s in strings.split("\n"))
+    return sum(is_nice(s) for s in strings.splitlines())
 
 
 if __name__ == "__main__":
